@@ -129,7 +129,7 @@ class MockBackend {
 
     // Roles: Only the Employer (who owns the job posting) can update the status.
     if (job.companyId != user.companyId) {
-      throw Exception('Unauthorized: You can only update applications for your own company\\'s job postings.');
+      throw Exception("Unauthorized: You can only update applications for your own company's job postings.");
     }
 
     // State Machine Rule: Cannot transition from 'Rejected' to 'Interview'.
